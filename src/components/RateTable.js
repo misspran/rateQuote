@@ -1,16 +1,15 @@
 import React from 'react';
-import { Table } from 'semantic-ui-react';
+import { Table, Segment, Dimmer, Loader, Container } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 
 class QuotesTable extends React.Component {
 
    render (){
-       console.log(this.props)
+    
     const quotes = this.props.quotes
     return (
-   
-   <Table celled  key={'Primary'} striped>
+     <Table celled  key={'Primary'} striped>
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell>Lender</Table.HeaderCell>
@@ -19,7 +18,6 @@ class QuotesTable extends React.Component {
           <Table.HeaderCell>Closing Cost</Table.HeaderCell>
           <Table.HeaderCell>Monthly Payment</Table.HeaderCell>
           <Table.HeaderCell>APR</Table.HeaderCell>
-          
         </Table.Row>
       </Table.Header>
       <Table.Body>
@@ -35,7 +33,11 @@ class QuotesTable extends React.Component {
       )}
       </Table.Body>
     </Table>
- 
+      
+      
+      
+      
+     
     )}
   
 }

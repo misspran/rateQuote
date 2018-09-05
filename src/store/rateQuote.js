@@ -22,7 +22,7 @@ const pause = (duration) => new Promise(res => setTimeout(res, duration));
       },
       body: JSON.stringify(info)
     })
-    await pause(10000)
+    await pause(100)
     
    return result.json();
 
@@ -51,11 +51,26 @@ const pause = (duration) => new Promise(res => setTimeout(res, duration));
 
  export const fetchQuotes = (info) => async (dispatch) => {
     try {
+
     let resultId = await fetchRequestId(info)
     resultId = await resultId.requestId
+    
+    let counter = 0;
     let result = await fetchResults(resultId)
+    while(counter < 20){
+    if(result.done){
+      return result;
+    }else{
+      await pause(1000)
+      result = await fetchResults(resultId)
       console.log(result)
-    dispatch(fetching(result.rateQuotes))
+      dispatch(fetching(result.rateQuotes))
+      
+    }
+    counter++
+    }
+    
+    
     }
     catch(err){console.error(err)}
   } 

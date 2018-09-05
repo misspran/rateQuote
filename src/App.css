@@ -34,8 +34,17 @@ body {
   border-radius: 0px;
 }
 
+
 .ui.table{
   border-radius: 0px;
+}
+
+.loader {
+  padding: 2em 0em 2em;
+  display: flex;
+  border-radius: 0px;
+  align-items: center;
+  justify-content: center;
 }
 .navbar{
   height: 69px;

@@ -34,7 +34,7 @@ class QuoteForm extends React.Component {
         if(this.state.creditScore > 800 || this.state.creditScore < 300 || isNaN(this.state.creditScore)|| this.state.creditScore === null){
         this.setState({creditScoreError:"Must be a valid credit score between 300 and 800"})
         }else{
-        this.setState({creditScore: parseInt(this.state.creditScore)})
+        this.setState({creditScore: parseInt(this.state.creditScore, 10)})
         this.setState({creditScoreError:""});
 
         }

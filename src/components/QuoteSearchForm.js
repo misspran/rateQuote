@@ -49,7 +49,7 @@ class QuoteForm extends React.Component {
     }
     handleChange = (e, {name, value}) => {
         e.preventDefault()
-        this.setState({ [name]: Number(value)})
+        this.setState({ [name]: Number(value), dirty:true})
         console.log(this.state)
     }
 
@@ -80,15 +80,15 @@ class QuoteForm extends React.Component {
                 <Form.Select label='Occupancy' options={occupancy}  onChange={this.handleDropdownChange}  name="occupancy" error={Boolean(!this.state.occupancy) && this.state.dirty}/>
                 </Form.Group>
                 <Container textAlign='right'>
-                { this.props.creditScoreError ? <Message
+                { this.state.creditScoreError ? <Message
                     error
                     header="Problem credit score value"
                     content={this.props.creditScoreError}
                   /> : null}
-                { this.props.loanSizeError ? <Message
+                { this.state.loanSizeError ? <Message
                     error
                     header="Problem loan size value"
-                    content={this.props.loanSize}
+                    content={this.state.loanSizeError}
                   /> : null}
                 <Form.Button content='Quote Rates' color='yellow' size='large' onClick={this.handleSubmit} />
                 

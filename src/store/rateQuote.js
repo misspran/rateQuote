@@ -8,6 +8,7 @@ export const fetching = quotes => ({ type: FETCH_QUOTES, quotes });
 
 let api_key = key.api_key;
 
+const pause = (duration) => new Promise(res => setTimeout(res, duration));
 
  const fetchRequestId = async (info)=> {
   try{
@@ -21,7 +22,8 @@ let api_key = key.api_key;
       },
       body: JSON.stringify(info)
     })
-   setTimeout(8000)
+    await pause(10000)
+    
    return result.json();
 
   }
@@ -40,7 +42,7 @@ let api_key = key.api_key;
         }
       }
     )
-    setTimeout(8000)
+    console.log(result)
     return result.json();
 
   }
@@ -50,12 +52,8 @@ let api_key = key.api_key;
  export const fetchQuotes = (info) => async (dispatch) => {
     try {
     let resultId = await fetchRequestId(info)
-    if(resultId){
-    }
     resultId = await resultId.requestId
     let result = await fetchResults(resultId)
-      setTimeout(5000)
-      result = await fetchResults(resultId)
       console.log(result)
     dispatch(fetching(result.rateQuotes))
     }

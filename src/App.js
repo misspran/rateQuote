@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-//import {fetchQuotes} from './store/rateQuote'
 import RateTable from './components/RateTable';
 import QuoteForm from './components/QuoteSearchForm'
 import {Container, Grid} from 'semantic-ui-react';

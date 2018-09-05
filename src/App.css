@@ -33,7 +33,10 @@ body {
 .ui.form .field>.selection.dropdown{
   border-radius: 0px;
 }
-
+#table-wrapper {
+  width: 100%;
+  height: 100%;
+}
 
 .ui.table{
   border-radius: 0px;

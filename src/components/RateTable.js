@@ -9,6 +9,8 @@ class QuotesTable extends React.Component {
     
     const quotes = this.props.quotes
     return (
+      <div id='table-wrapper'>
+      {quotes.length?
      <Table celled  key={'Primary'} striped>
       <Table.Header>
         <Table.Row>
@@ -32,8 +34,8 @@ class QuotesTable extends React.Component {
         </Table.Row>
       )}
       </Table.Body>
-    </Table>
-      
+    </Table>:<div/>
+      }</div>
       
       
       

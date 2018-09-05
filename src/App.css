@@ -1,0 +1,83 @@
+body {
+  font-family: 'Lato', sans-serif;
+  
+}
+
+
+.ui.yellow.button{
+  background-color: #fbbd08;
+  color: #252525;
+  border-radius: 0px;
+  margin: 0;
+  text-align: right;
+}
+.ui.form .fields{
+  margin: 1em -.5em 1em;
+}
+.ui.form .field {
+  clear: both;
+  margin: 0 0 0em;
+}
+.ui.grid {
+  width: 100%;
+}
+
+.ui.form {
+  margin: 1em 0em 2em;
+  width: 100%;
+}
+.ui.form .fields .field .ui.input input {
+  border-radius: 0px;
+}
+
+.ui.form .field>.selection.dropdown{
+  border-radius: 0px;
+}
+
+.ui.table{
+  border-radius: 0px;
+}
+.navbar{
+  height: 69px;
+  background: #183247;
+  font-size: 12px;
+  color: #ffffff;
+  padding-right: 12px;
+  float: left;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+
+}
+#title{
+  margin: 1em 0em 1em;
+  vertical-align: middle;
+  flex: 0 0 auto;
+}
+#logo{
+  padding: 0 .25em 0 ;
+  margin: 1em 0em 1em;
+  flex: 0 0 auto;
+  width: auto;
+  max-height: 22px;
+  vertical-align: middle;
+}
+
+
+.ui.grid>* {
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+thead{
+  background-color: #183247;
+  border-radius: 0px;
+}
+.ui.table thead th{
+  font-weight: 700;
+  background-color:#183247;
+  color: #ffffff;  
+}

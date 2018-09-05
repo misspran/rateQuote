@@ -1,3 +1,5 @@
+Current live version of site here: http://ratequote.surge.sh/
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 # Setup
